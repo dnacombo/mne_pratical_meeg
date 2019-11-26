@@ -6,6 +6,8 @@ Authors:
 
 	- Alexandre Gramfort, Inria, CEA Neurospin
 	- Denis A. Engemann, Inria, CEA Neurospin
+	
+To install MNE-python, follow instructions at https://mne.tools/stable/install/
 
 You will need the data from https://owncloud.icm-institute.org/index.php/s/cNu5jmiOhe7Yuoz/download
 
