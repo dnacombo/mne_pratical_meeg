@@ -30,11 +30,9 @@ To start a Jupyter notebook, open your terminal and navigate to the directory wh
 
 #### Day 0 (Monday October 27, 2025)
 
- - 14:00 - 15:30 Training cutting instructors
- - 15:30 - 15:40 Break
- - 15:40 – 17:30 Advanced training on MNE-Python
-
- - 17:30 – 18:00 Panel discussion
+ - 14:00 - 16:00 Training cutting instructors
+ - 16:00 - 16:30 Break
+ - 16:30 – 18:00 Toolbox Q&A
 
 #### Day 1 (Tuesday October 28, 2025)
 
