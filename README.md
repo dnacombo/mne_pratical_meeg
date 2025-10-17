@@ -13,7 +13,7 @@ Authors of the material:
 
 Please make sure you do the following steps before the first hands-on session:
 
-0. You will need to [download this directory of scripts](https://github.com/wmvanvliet/mne_practical_meeg_2025).
+0. You will need to [download this directory of scripts]([https://github.com/wmvanvliet/mne_practical_meeg_2025](https://github.com/wmvanvliet/mne_practical_meeg_2025/archive/refs/heads/main.zip)).
 1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048).
 2. You will need to [download the extra data](https://drive.google.com/file/d/1EE_pDY-i6zkS5qiysaGw6HiG9yRLL1y1/view?usp=share_link) that we will use in some tutorials.
 3. You will need to have an up-to-date version of MNE-Python version 1.10 installed on your machine (you need a *full install* with all dependencies, **not** "MNE-Python with core functionalities only"). Later versions of MNE-Python may also work, but earlier version will not. See instructions at: https://mne.tools/stable/install/index.html
