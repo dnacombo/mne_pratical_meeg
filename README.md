@@ -23,7 +23,8 @@ Please make sure you do the following steps before the first hands-on session:
 
 ### Start a Jupyter notebook
 
-To start a Jupyter notebook, open your terminal and navigate to the directory where you saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your internet browser. Click on the notebook you want to run!
+To start a Jupyter notebook, open your terminal and activate the correct python environment. See the [installation instructions of MNE-Python](https://mne.tools/stable/install/index.html) on the proper way to do this, as it depends on what method you used to install MNE-Python.
+Inside the terminal, navigate with `cd` to the directory where you saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your internet browser. Click on the notebook you want to run!
 
 
 ## Program
