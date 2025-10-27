@@ -9,6 +9,11 @@ Authors of the material:
 	- Alexandre Gramfort, Inria, CEA Neurospin
 	- Denis A. Engemann, Inria, CEA Neurospin
 
+## Live document for asking and answering questions
+
+During the workshop, we will use a shared document for asking and responding to questions:
+https://hackmd.io/@wmvanvliet/BJilUAnAge/edit
+
 ## Before you arrive
 
 Please make sure you do the following steps before the first hands-on session:
