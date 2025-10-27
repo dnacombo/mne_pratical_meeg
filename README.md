@@ -1,4 +1,4 @@
-# Material for the MNE-Python workshop of Practical MEEG 2022
+# Material for the MNE-Python workshop of Practical MEEG 2025
 
 More info on the workshop: [https://cuttingeeg.org/practicalmeeg2025](https://cuttingeeg.org/practicalmeeg2025)
 
