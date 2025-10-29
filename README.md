@@ -14,6 +14,8 @@ Authors of the material:
 During the workshop, we will use a shared document for asking and responding to questions:
 https://hackmd.io/@wmvanvliet/BJilUAnAge/edit
 
+Backup shared document: https://notes.coderefinery.org/HA-NqCW8T0aUTvddKzIIpA
+
 ## Before you arrive
 
 Please make sure you do the following steps before the first hands-on session:
