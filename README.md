@@ -1,4 +1,4 @@
-# Material for the MNE-Python workshop of Practical MEEG 2022
+# Material for the MNE-Python workshop of Practical MEEG 2025
 
 More info on the workshop: [https://cuttingeeg.org/practicalmeeg2025](https://cuttingeeg.org/practicalmeeg2025)
 
@@ -9,32 +9,38 @@ Authors of the material:
 	- Alexandre Gramfort, Inria, CEA Neurospin
 	- Denis A. Engemann, Inria, CEA Neurospin
 
+## Live document for asking and answering questions
+
+During the workshop, we will use a shared document for asking and responding to questions:
+https://hackmd.io/@wmvanvliet/BJilUAnAge/edit
+
+Backup shared document: https://notes.coderefinery.org/HA-NqCW8T0aUTvddKzIIpA
+
 ## Before you arrive
 
 Please make sure you do the following steps before the first hands-on session:
 
-0. You will need to [download this directory of scripts](https://github.com/wmvanvliet/mne_practical_meeg_2025).
-1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048).
-2. You will need to [download the extra data](https://drive.google.com/file/d/1EE_pDY-i6zkS5qiysaGw6HiG9yRLL1y1/view?usp=share_link) that we will use in some tutorials.
-3. You will need to have an up-to-date version of MNE-Python installed on your machine (you need a *full install* with all dependencies, **not** "MNE-Python with core functionalities only"). See instructions at: https://mne.tools/stable/install/index.html
+0. You will need to [download this directory of scripts](https://github.com/wmvanvliet/mne_practical_meeg_2025/archive/refs/heads/main.zip).
+1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048) and extract it in the scripts folder (`mne_practical_meeg_2025`).
+2. You will need to [download the extra data](https://drive.google.com/file/d/1UNMtNpmTr35yg2J-VorEnkzL4l2uN9z_/view?usp=sharing) that we will use in some tutorials, and extract it in the scripts folder (`mne_practical_meeg_2025`).
+3. You will need to have an up-to-date version of MNE-Python version 1.10 installed on your machine (you need a *full install* with all dependencies, **not** "MNE-Python with core functionalities only"). Later versions of MNE-Python may also work, but earlier versions will not. See instructions at: https://mne.tools/stable/install/index.html
 4. To check your installation, please look at the (very short!) notebook [Check your installation](0-Installation_check.ipynb). See below if you need a reminder how to start it.
 5. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
 [Intro to Python](intro_to_python/0a-Intro_Python.ipynb), [Intro to Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
 
 ### Start a Jupyter notebook
 
-To start a Jupyter notebook, open your terminal and navigate to the directory where you saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your internet browser. Click on the notebook you want to run!
+To start a Jupyter notebook, open your terminal and activate the correct python environment. See the [installation instructions of MNE-Python](https://mne.tools/stable/install/index.html) on the proper way to do this, as it depends on what method you used to install MNE-Python.
+Inside the terminal, navigate with `cd` to the directory where you saved this directory of scripts. Then type the command `jupyter notebook` and Jupyter should open in your internet browser. Click on the notebook you want to run!
 
 
 ## Program
 
 #### Day 0 (Monday October 27, 2025)
 
- - 14:00 - 15:30 Training cutting instructors
- - 15:30 - 15:40 Break
- - 15:40 – 17:30 Advanced training on MNE-Python
-
- - 17:30 – 18:00 Panel discussion
+ - 14:00 - 16:00 Training cutting instructors
+ - 16:00 - 16:30 Break
+ - 16:30 – 18:00 Toolbox Q&A
 
 #### Day 1 (Tuesday October 28, 2025)
 
