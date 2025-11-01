@@ -4,6 +4,8 @@ More info on the workshop: [https://cuttingeeg.org/practicalmeeg2025](https://cu
 
 Authors of the material:
 
+    - Natalie Schaworonkow, ESI Frankfurt
+    - Simon Kern, ZI Mannheim
     - Marijn van Vliet, Aalto University, Department of Neuroscience and Biomedical Engineering
 	- Britta Westner, Radboud University Nijmegen, Donders Institute
 	- Alexandre Gramfort, Inria, CEA Neurospin
