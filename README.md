@@ -1,34 +1,105 @@
-# Material for the MNE-Python workshop of Practical MEEG 2025
+#Master in Cognitive Sciences
+---------
+Paris Sciences et Lettres et École Normale Supérieure
+###Cognitive Neuroanatomy & Neuroimaging Class 
 
-More info on the workshop: [https://cuttingeeg.org/practicalmeeg2025](https://cuttingeeg.org/practicalmeeg2025)
+Maximilien Chaumon, _PhD, Centre MEG-EEG, CENIR, Paris Brain Institute_
 
-Authors of the material:
+---------
+#Practical session
+#M/EEG analysis: 
+#a data tour with MNE-Python
 
-    - Natalie Schaworonkow, ESI Frankfurt
-    - Simon Kern, ZI Mannheim
-    - Marijn van Vliet, Aalto University, Department of Neuroscience and Biomedical Engineering
-	- Britta Westner, Radboud University Nijmegen, Donders Institute
-	- Alexandre Gramfort, Inria, CEA Neurospin
-	- Denis A. Engemann, Inria, CEA Neurospin
+This material is freely adapted from the [Practical MEEG 2025 workshop](https://zenodo.org/records/18359739) offered by:
 
-## Live document for asking and answering questions
+   - Natalie Schaworonkow, ESI Frankfurt
+   - Simon Kern, ZI Mannheim
+   - Marijn van Vliet, Aalto University, Department of Neuroscience and Biomedical Engineering
+   - Britta Westner, Radboud University Nijmegen, Donders Institute
+   - Alexandre Gramfort, Inria, CEA Neurospin
+   - Denis A. Engemann, Inria, CEA Neurospin
 
-During the workshop, we will use a shared document for asking and responding to questions:
-https://hackmd.io/@wmvanvliet/BJilUAnAge/edit
+##Download data and scripts
 
-Backup shared document: https://notes.coderefinery.org/HA-NqCW8T0aUTvddKzIIpA
+Download the data: https://sdrive.cnrs.fr/s/tBCNL2XgRg9e4yQ
 
-## Before you arrive
+Download some extras: https://sdrive.cnrs.fr/s/bMwfS3KRXWiiik9
 
-Please make sure you do the following steps before the first hands-on session:
+Download the scripts: https://sdrive.cnrs.fr/s/cJLemXLfe9KrGA8
 
-0. You will need to [download this directory of scripts](https://github.com/wmvanvliet/mne_practical_meeg_2025/archive/refs/heads/main.zip).
-1. You will need to [download the data](https://doi.org/10.5281/zenodo.7405048) and extract it in the scripts folder (`mne_practical_meeg_2025`).
-2. You will need to [download the extra data](https://drive.google.com/file/d/1UNMtNpmTr35yg2J-VorEnkzL4l2uN9z_/view?usp=sharing) that we will use in some tutorials, and extract it in the scripts folder (`mne_practical_meeg_2025`).
-3. You will need to have an up-to-date version of MNE-Python version 1.10 installed on your machine (you need a *full install* with all dependencies, **not** "MNE-Python with core functionalities only"). Later versions of MNE-Python may also work, but earlier versions will not. See instructions at: https://mne.tools/stable/install/index.html
-4. To check your installation, please look at the (very short!) notebook [Check your installation](0-Installation_check.ipynb). See below if you need a reminder how to start it.
-5. If you are not familiar with Python, we invite you to take the time to work on these tutorials:
-[Intro to Python](intro_to_python/0a-Intro_Python.ipynb), [Intro to Numpy](intro_to_python/0b-Intro_Numpy.ipynb).
+Store all three zip files in your project folder. We'll call it `MNE_Tuto`. Unzip the files.
+
+##Install and setup
+In this session, we will work with a sample dataset using the MNE-python software suite.
+Please follow the installation guide below.
+
+###Part 1: Install uv
+UV is a standalone package manager that will allow you to setup your local MNE-python environment. The best way to install uv is via the official standalone installer. It’s faster and doesn't require a pre-existing Python installation.
+
+####Windows
+Open PowerShell (not CMD) and run:
+
+`powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+
+####macOS
+
+You can use the official script or Homebrew:
+Script:
+
+`curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+Homebrew:
+
+`brew install uv`
+
+####Linux
+
+`curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+Note: After installation, you may need to close and open a new terminal or run source $HOME/.local/bin/env (on Linux/macOS) to make the uv command available.
+
+###Part 2: Install MNE-Python using uv
+####1. Initialize your project
+Create a directory for this session and let uv handle the environment.
+
+```
+mkdir MEEG_analysis && cd MEEG_analysis
+
+uv init
+```
+
+####2. Install MNE-Python
+Install MNE with full functionality (3D plotting).
+
+```
+uv add "mne[full]"
+```
+
+####3. System Requirements (Linux Only)
+If you are on Linux and want to use interactive 3D plots, you need some system-level graphics libraries:
+
+```
+sudo apt install libxcb-xinerama0 libqt6gui6  # Ubuntu/Debian example
+```
+
+###Part 3: Verify & Launch MNE
+To verify that MNE is correctly installed and see your system configuration, run:
+
+```
+uv run python -c "import mne; mne.sys_info()"
+```
+
+Should display system information.
+
+###Part 4: Install Jupyter
+Most neuroimaging work happens in notebooks. Add Jupyter to your environment with one command:
+
+
+```
+uv add jupyterlab
+uv run jupyter lab
+```
+
 
 ### Start a Jupyter notebook
 
@@ -38,71 +109,19 @@ Inside the terminal, navigate with `cd` to the directory where you saved this di
 
 ## Program
 
-#### Day 0 (Monday October 27, 2025)
+#### Vendredi 13 mars 2026 14h-16h
 
- - 14:00 - 16:00 Training cutting instructors
- - 16:00 - 16:30 Break
- - 16:30 – 18:00 Toolbox Q&A
+ - Install and setup
+ - Preprocessing
 
-#### Day 1 (Tuesday October 28, 2025)
+#### Vendredi 20 mars 2026 14h-16h
 
- - 08:30 – 09:00 Registration, with coffee/tea + Welcome & intro
+  - Evoked analysis
+  - Time-frequency
 
- - 09:00 – 10:00 Lecture: Get to know your data: preprocessing, segmentation and artifacts
- - 10:00 - 10:10 Break
- - 10:10 – 12:00 Hands-on: [Preprocessing](1-Preprocessing.ipynb) using MNE-Python
+#### Vendredi 27 mars 2026 14h-16h
 
- - 12:00 - 12:30 TrainEErs debriefing
-
- - 12:30 – 14:00 Lunch and posters
-
- - 14.00 – 15:30 Tune in to your frequency analysis
- - 15:30 - 15:40 Break
- - 15:40 – 17:30 Hands-on: [Sensor-level analysis](2-Time_domain_evoked_responses.ipynb) using MNE-Python
- - 15:40 – 17:30 Hands-on: [Time-frequency analysis](3-Time_frequency_analysis.ipynb) using MNE-Python
-
- - 17:00 – 17:30 Panel discussion
- - 17:30 - 18:00 CuttingGardens 2026
-
-#### Day 3 (Wednesday October 29, 2025)
-
- - 09:00 – 10:30 Lecture: Source level analysis I: head and source level model and forward computation (Robert)
- - 10:30 - 10:40 Break
- - 10:40 – 12:00 Hands-on: [Forward modelling](4-Forward_modelling.ipynb) using MNE-Python
-
- - 12:00 - 12:30 TrainEErs debriefing
-
- - 12:30 – 14:00 Lunch and posters
-
- - 14:00 – 15:30 Lecture: Source level analysis II: getting to source level maps and time-series (Robert)
- - 15:30 - 15:40 Break
- - 15:40 - 17:00 Hands-on: [Source estimation](5-Source_reconstruction.ipynb) using MNE-Python
-
- - 17:00 – 17:30 Panel discussion
- - 17:30 – 18:00 CuttingStuff
-
-#### Day 4 (Thursday October 30, 2025)
-
- - 09:00 – 10:30 Lecture: Get and report results with confidence I: univariate approach
- - 10:30 - 10:40 Break
- - 10:40 – 12:00 Hands-on: [Group level analysis](6-Group_analysis.ipynb) using MNE-Python
-
- - 12:00 - 12:30 TrainEErs debriefing
-
- - 12:30 – 14:00 Lunch and posters
-
- - 14.00 – 17:00 Toolbox Bouquet (online)
- - 17.00 – 18:00 AI use in MEG/EEG data analysis
-
- - 18:00 Social event
-
-#### Day 5 (Friday October 31, 2025)
-
- - 09:00 – 10:30 Lecture: Get and report results with confidence II: multivariate approach
- - 10:30 - 10:40 Break
- - 10:40 – 12:00 Hands-on: [Multivariate analysis](7-Multivariate_analysis.ipynb) using MNE-Python
-
- - 12:00 - 12:30 TrainEErs debriefing
+  - New tools and ways of creating pipelines: the 2026 update
 
 
 ### References and credit
