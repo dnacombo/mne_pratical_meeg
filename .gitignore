@@ -5,3 +5,7 @@ fwhm.ipynb
 random-matrix.*
 extra_data_mne/
 ds000117_pruned/
+renv/
+README.html
+.vscode/
+.gitignore/
